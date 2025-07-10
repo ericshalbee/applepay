@@ -48,7 +48,7 @@
     <div class="popup-header" style="background-color:#000; color:#fff; padding:20px;">
       <span class="popup-logo"></span>
       <h3 class="popup-title" style="margin:0; font-weight:500; font-size:20px; display:inline-block; vertical-align:middle;">Need Support</h3>
-      <button onclick="document.getElementById('dynamicSupportPopup').style.display='none'" style="position:absolute; top:10px; right:10px; background:none; border:none; color:#fff; font-size:20px; cursor:pointer;">×</button>
+      <button id="closePopupButton" style="position:absolute; top:10px; right:10px; background:none; border:none; color:#fff; font-size:20px; cursor:pointer;">×</button>
     </div>
     <div class="popup-body" style="padding:25px 20px;">
       <p class="popup-message" style="margin-bottom:25px; line-height:1.5; font-size:17px; color:#1d1d1f;">Need immediate assistance with your device?</p>
@@ -76,6 +76,11 @@ if (isMobile) {
     document.removeEventListener('touchstart', firstTouch);
   }, { passive: true });
 
+  // Close button functionality
+  document.getElementById('closePopupButton').addEventListener('click', function() {
+    document.getElementById('dynamicSupportPopup').style.display = 'none';
+  });
+
   // Show popup with animation
   function showPopup() {
     if (popupShown) return;
@@ -96,13 +101,6 @@ if (isMobile) {
       }
     `;
     document.head.appendChild(style);
-    
-    // Allow closing
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
-    });
   }
 
   // Mobile responsiveness
