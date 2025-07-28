@@ -37,7 +37,7 @@ const IPhoneSupport: React.FC = () => {
   ];
 
   return (
-    <SectionContainer id="device-support" title="Contact Apple Pay Support from Your Device">
+    <SectionContainer id="iphone-support" title="📱 Contact Apple Pay Support from iPhone">
       <div className="relative">
         <div className="absolute left-4 md:left-6 top-8 bottom-8 w-0.5 bg-gray-200 z-0"></div>
         
@@ -55,31 +55,6 @@ const IPhoneSupport: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-      
-      <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
-        <h3 className="text-lg font-semibold text-blue-900 mb-3">Quick Access to Support</h3>
-        <p className="text-blue-800 mb-4">
-          The fastest way to get help is through your device's built-in support options or Apple's official website.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a 
-            href="https://getsupport.apple.com" 
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Start Support Chat
-          </a>
-          <a 
-            href="https://support.apple.com/apple-pay" 
-            className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors text-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Browse Help Articles
-          </a>
         </div>
       </div>
     </SectionContainer>
