@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Enhanced crawling directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block unnecessary crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://iphonesupport.netlify.app/sitemap.xml
+
+# Disallow specific paths
+Disallow: /api/
+Disallow: /_next/
